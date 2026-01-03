@@ -5,4 +5,4 @@ driver enables:
   * Audio
   * Accelerometer
 
-Driver is compatable with postmarket os Lenovo Tab3 7 Essential (lenovo-tb3710i)
+Driver is Compatible with postmarket os Lenovo Tab3 7 Essential (lenovo-tb3710i)
