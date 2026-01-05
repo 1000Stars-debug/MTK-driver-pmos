@@ -1,3 +1,4 @@
+MAKEFLAGS += --silent
 SRC_DIR=driver_src
 BASE_SCRIPT=base/base_script.sh
 OUT_DIR=out
@@ -9,6 +10,7 @@ build:
 	mkdir out
 	cp $(BASE_SCRIPT) $(TARGET)
 	$(TAR) -czf - $(SRC_DIR) >> $(TARGET)
+	chmod +x $(TARGET)
 	echo "file is the saved in $(OUT_DIR)"
 clean:
 	rm -rf $(OUT_DIR)
