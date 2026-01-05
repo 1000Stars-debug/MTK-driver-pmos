@@ -11,6 +11,6 @@ build:
 	cp $(BASE_SCRIPT) $(TARGET)
 	$(TAR) -czf - $(SRC_DIR) >> $(TARGET)
 	chmod +x $(TARGET)
-	echo "file is the saved in $(OUT_DIR)"
+	echo "file is saved in $(OUT_DIR)"
 clean:
 	rm -rf $(OUT_DIR)
