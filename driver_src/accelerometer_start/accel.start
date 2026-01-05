@@ -1,0 +1,15 @@
+#!/bin/sh
+
+sleep 2
+
+
+echo 1 > /sys/class/misc/hwmsensor/active
+
+
+echo 200 > /sys/class/misc/m_acc_misc/accdelay
+echo 1 > /sys/class/misc/m_acc_misc/accactive
+echo "0" > /sys/bus/platform/drivers/gsensor/cali
+echo 1 > /sys/class/misc/m_acc_misc/accenablenodata
+
+
+echo 1 > /sys/class/misc/m_acc_misc/accflush

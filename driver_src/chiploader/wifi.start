@@ -1,0 +1,25 @@
+#!/bin/ash
+
+ESSENTIALS="/usr/local/bin/"
+
+
+if pgrep wmt_loader > /dev/null; then
+    echo "wmt_loader is already running. Skipping to avoid crash."
+else
+    echo "Starting wmt_loader..."
+    $ESSENTIALS/wmt_loader &
+    sleep 2
+fi
+
+
+if pgrep 6620_launcher > /dev/null; then
+    echo "6620_launcher is already running. Skipping."
+else
+    echo "Starting 6620_launcher..."
+    # Points to your custom path and uses standard firmware location
+    $ESSENTIALS/6620_launcher -p /system/etc/firmware/ &
+    sleep 2
+fi
+
+echo 1 | tee /dev/wmtWifi 
+

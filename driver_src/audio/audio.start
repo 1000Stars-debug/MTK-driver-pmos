@@ -1,0 +1,8 @@
+#!/bin/ash
+
+amixer -c 0 cset numid=4 1
+amixer -c 0 cset numid=12 1
+amixer -c 0 cset numid=2 1
+amixer -c 0 cset numid=1 1
+amixer -c 0 cset numid=10 120
+amixer -c 0 cset numid=9 120
